@@ -1,6 +1,8 @@
 /*
  *the following file contains the implementations of the functions needed to execute the game codebreaker the code for which is written in main.c. All
- *functions have a small description given right before their implementation and the comments give a more in depth description
+ *functions have a small description given right before their implementation and the comments give a more in depth description. 
+ *The basic idea is that we first check for a valid seed input using set_seed, then generate a random solution using the units digit of 4 random numbers
+ *then you check for number of perfect matches and mismatches.
 */
 
 
@@ -111,8 +113,8 @@ void start_game (int* one, int* two, int* three, int* four)
  */
 int make_guess (const char guess_str[], int* one, int* two, int* three, int* four)
 {
-	int ret_value, perf_match = 0, mis_match = 0;                         //defining local variables to be used in the function
-	int s1 = 0, s2 = 0, s3 = 0, s4 = 0, g1 = 0, g2 = 0, g3 = 0, g4 = 0;   
+	int ret_value, perf_match = 0, mis_match = 0;                         //defining counters for perfect matches and mismatches
+	int s1 = 0, s2 = 0, s3 = 0, s4 = 0, g1 = 0, g2 = 0, g3 = 0, g4 = 0;   //defining variables to keep a track of solution and guess character pairings
 	int w,x,y,z;
 	char post[1];
 	ret_value = sscanf (guess_str, "%d%d%d%d%1s", &w, &x, &y, &z, post);  //using sscanf to break the user entered string into needed subsrtrings
