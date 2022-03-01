@@ -1,3 +1,10 @@
+/*									
+ *
+ * file adapted from 
+ * UIUC ECE198KL Spring 2013 Program 4
+ * student code by Steven S. Lumetta
+ */
+
 #include <stdio.h>
 
  
